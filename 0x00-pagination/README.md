@@ -1,8 +1,7 @@
 # 0x00-Pagination Project
-### Resources
-### Read or watch: 
-1. [REST API Design: Pagination](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/#pagination)
-2. [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS)
+## Resources: Read or watch: 
+[REST API Design: Pagination](https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/#pagination)
+[HATEOAS](https://en.wikipedia.org/wiki/HATEOAS)
    
 ## Tasks Done
 
