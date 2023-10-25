@@ -1,30 +1,37 @@
 #!/usr/bin/env python3
-"""LRU Caching Module"""
-
+"""LRU caching module.
+"""
 from collections import OrderedDict
 
 from base_caching import BaseCaching
 
-class LRUCache(BaseCaching):
-    """A cache that uses the Least Recently Used (LRU) eviction policy."""
 
+class LRUCache(BaseCaching):
+    """Represent a LRU removal mechanism when the limit is reached.
+    """
     def __init__(self):
-        """Initialize the LRU cache."""
+        """Initialize cache.
+        """
         super().__init__()
-        # Use an ordered dictionary to maintain items in their access order
         self.cache_data = OrderedDict()
 
     def put(self, key, item):
-        """Add an item to the cache while enforcing LRU eviction if the limit is reached."""
+        """Put item in the cache.
+        """
         if key is None or item is None:
-            return  # Skip if the key or item is invalid
-
+            return
         if key not in self.cache_data:
-            # Check if adding the item would exceed the cache's capacity
             if len(self.cache_data) + 1 > BaseCaching.MAX_ITEMS:
-                # Remove and print the LRU item (based on access order)
-                lru_key, _ = self.cache_data.popitem(last=True)
+                lru_key, _ = self.cache_data.popitem(True)
                 print("DISCARD:", lru_key)
+            self.cache_data[key] = item
+            self.cache_data.move_to_end(key, last=False)
+        else:
+            self.cache_data[key] = item
 
-           
-
+    def get(self, key):
+        """gets item by key.
+        """
+        if key is not None and key in self.cache_data:
+            self.cache_data.move_to_end(key, last=False)
+        return self.cache_data.get(key, None)
