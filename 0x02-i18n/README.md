@@ -4,7 +4,9 @@ This project contains web pages with Flask.
 
 ## Resources
 [Flask-Babel](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-i18n-and-l10n)
+
 [Flask i18n tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-i18n-and-l10n)
+
 [pytz](https://pytz.sourceforge.net/)
 
 ## Tasks Done
