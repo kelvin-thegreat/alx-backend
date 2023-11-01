@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""A Flask app-Force locale with URL parameter.
+"""Flask app-Force locale with URL parameter.
 """
 from flask_babel import Babel
 from flask import Flask, render_template, request
 
 
 class Config:
-    """Represents a Flask Babel configuration.
+    """Flask Babel configuration.
     """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
@@ -21,7 +21,7 @@ babel = Babel(app)
 
 @babel.localeselector
 def get_locale() -> str:
-    """Retrieves the locale for a web page.
+    """The locale for a web page.
     """
     queries = request.query_string.decode('utf-8').split('&')
     query_table = dict(map(
@@ -42,5 +42,4 @@ def get_index() -> str:
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)"""
-
+    app.run(host='0.0.0.0', port=5000)
