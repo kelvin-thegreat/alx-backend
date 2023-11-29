@@ -1,4 +1,3 @@
-#!/usr/bin/env yarn dev
 import { createClient, print } from 'redis';
 
 // Create a Redis client
