@@ -21,7 +21,7 @@ Project for Creating queueing system in JavaScript.
     $ tar xzf redis-6.0.10.tar.gz
     $ cd redis-6.0.10
     $ make
-    make MALLOC=libc # for Linux systems
+    # make MALLOC=libc # for Linux systems
     # make MALLOC=jemalloc # for Mac OS X systems
     ```
     + Start Redis in the background with `src/redis-server`.
