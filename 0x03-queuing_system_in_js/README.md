@@ -12,7 +12,7 @@ Project for Creating queueing system in JavaScript.
 + [Kue deprecated but still use in the industry](https://github.com/Automattic/kue)
 
 
-## Tasks To Complete
+## Tasks
 
 + [x] 0. **Install a redis instance**
   + Download, extract, and compile the latest stable Redis version (higher than 5.0.7 - [https://redis.io/download](https://redis.io/download)):
